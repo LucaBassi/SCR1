@@ -1,0 +1,82 @@
+# Ex0.1
+
+00.04.1900 <- BAD
+11.09.1976
+32.04.1999 <- BAD
+10.99.2099 <- BAD
+31.06.2000 <- BAD
+18.10.2014
+11.11.1911
+9.2.2002
+14.13.2018 <- BAD
+30.02.2017 <- BAD
+27.02.2020
+04.08.998  <- BAD
+10.11.3122 <- BAD
+102.10.219876
+02.10.219876
+
+# Ex 0.2
+
+OK  foo@demo.net
+OK  barba@test.co.uk
+BAD john.doe@
+BAD john.doe@uk
+BAD john.doe@.uk
+OK  john.doe-of.the.ocean@there.com
+OK  yopla@super-bien.movie
+OK  JudithMeyer@my.personal.home.org
+BAD bad  address@there.com  # last part is OK
+BAD this@there...com
+OK  my$name@there.com
+
+# Ex 0.3
+
+#include <stdio.h>
+#include <stdlib.h>		// srand, rand et system
+#include <time.h>		// pour la fonction Time utilisÈe avec srand
+
+int main()
+{
+	int nbSecret,			// nombre tirÈ au hasard par l'ordinateur
+		nbChoisi,			// nombre chois par l'utilisateur
+		compteur = 0;		// compteur d'essais
+
+
+
+	// obtention d'un nombre entre 1 et 100
+	srand( (unsigned)time( NULL ) ); // pour que le nbr soit diffÈrent ‡ chaque fois
+	nbSecret = 1 + rand() % 100;
+
+	// boucle d'essais
+	do
+	{
+		printf ("Nombre : ");		// demande du nombre choisi
+		scanf ("%d", &nbChoisi);
+		compteur++;					// incrÈment du nombre d'essais
+
+		// test de la valeur
+		if (nbChoisi < nbSecret) printf ("Trop petit! \n\n");
+		if (nbChoisi > nbSecret) printf ("Trop Grand! \n\n");
+	}
+	while (nbSecret != nbChoisi);	// boucle tant que le bon nombre n'est pas trouvÈ
+
+
+	printf ("\n%d essais pour trouver\n%s!\n", compteur, compteur <= 7 ? "BRAVO" : "BOF");
+
+	return 0;
+}
+
+# Ex 0.6
+
+987 Yopla
+1040 Echallens
+1400 Yverdon-les-bains
+8765 La Sarraz
+7654 Goumëns
+1234    Wqqq
+9876 567 8737
+ 1666 Cool
+4567654345678 Cool
+8765 Super[Cool
+
