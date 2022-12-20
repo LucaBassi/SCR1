@@ -16,13 +16,11 @@ else
                 cat $1 | awk '/('$2')/ && !/^#/' | awk '{ print $3 }'
 
         else
-
-                cat vsftpd | awk '{if( !/^#/ && $1 == "'$2'"){$3 = "'$3'"};print }' >  outputFile
-
                 echo "vous avez entrer les variable optionneles $1 $2 $3";
-                echo $1
-                echo $2
-                echo $3
+#                cat vsftpd | awk -F= 'NF == 2 && !/\s*#/ && $1 ~/'$only'/ {print $1}'
+                cat $1 | awk '{if( !/^#/ && $1 == "'$2'"){$3 = "'$3'"};print }' >  outputFile
+                #cat outputFile > $1
+
 
         fi
 fi

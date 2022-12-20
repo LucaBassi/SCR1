@@ -1,1 +1,79 @@
-instances = wesh
+# default: off
+# description: The vsftpd FTP server serves FTP connections. It uses \
+#	normal, unencrypted usernames and passwords for authentication.
+service ftp
+{
+#
+# 
+#**********************************************************************************************
+# Ci-dessous entre les  "===" on peut trouver les modifications réalisées pour ce TP
+# !!INFOS!! Toutes ces options sont actives lorsque "décommenté" et inactive lorsque "commenté"
+#
+# Les commentaires concernant les commandes se trouvent à chaque fois en dessous de celle-ci
+# à l'inverse de l'exemple de celle se trouvant dans /etc/vsftpd/vsftpd.conf
+# ============================================================================================
+#
+#
+# Les commentaires concernant les commandes se trouvent à chaque
+# fois en dessous de celle-ci!!
+# 
+        per_source              = 3
+#
+# La commande ci-dessus limite le nombre de connexions pour une
+# même adresse ip à 3
+#
+instances = youpi
+#
+# Cette commande limte le nombre d'instances simulatanées du
+# serveur vsftpd à 20
+# only_from = PAS_BONNE
+        only_from                 = 127.0.0.1
+#
+# La commande autorise l'accès de notre serveur au seul réseau
+# du CPNV.
+#
+        no_access = 172.99.11.19
+#
+# Cette commande bannis l'accès aux adresses ip,la première est
+# celle de la machine sc-prsn-vm19 et la seconde est celle de M.Rey
+#
+        banner_fail             = /etc/vsftpd.busy_banner
+#
+# Cette commande affiche un message personnalisé lorsque la connexion
+# est refusé ou le dossier n'est pas accessible
+#
+        access_times            = 8:00-17:00
+# 
+# Détermine l'intervalle de temps durant laquelle le service est
+# disponible selon la forme suivante heure:minute-heure:minutes.
+# Les heure sont entre 0 et 23 et les minutes entre 0 et 59
+#
+        bind                    = 172.17.100.202
+#
+# Modifie le site existant pour qu'il réponde à l'adresse IP primaire
+#
+server                  = /usr/sbin/vsftpd
+#
+# Le serveur /usr/local/sbin/vsftpd est utilisé pour s'occuper des requêtes
+# FTP entrante.Il faut donc ici mettre le chemin d'accès ou se trouve notre
+# fichier binaire de vsftpd.
+#
+#
+server_args             = /etc/vsftpd/vsftpd.conf
+#
+# On change cette ligne de code pour démmarer le site ftp avec un fichier
+# de configuration différent (ici le vsftpd public)
+#
+#
+#=============================================================================
+#
+#
+	socket_type		= stream
+	wait			= no
+	user			= root
+	nice			= 10
+	disable			= no
+	flags			= IPv4
+#
+#
+}
