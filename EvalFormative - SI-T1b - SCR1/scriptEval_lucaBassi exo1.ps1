@@ -11,8 +11,10 @@ $testIfExist = 0
 
 foreach($file in $fileList) 
 {
+
     foreach($line in Get-Content -Path $file) 
     {
+    
         if($line -match $regexBegLine)
         {
             foreach($word in $line){
