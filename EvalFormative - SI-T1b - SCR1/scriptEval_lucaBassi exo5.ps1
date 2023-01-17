@@ -1,7 +1,7 @@
 #Get-Content $line | measure -Line -Character -Word -IgnoreWhiteSpac
-$str = "PowerShell"
+#$str = "PowerShell"
 # Use Length property
-$str.Length   
+#$str.Length   
 
 #--------------------------------------
 
@@ -9,14 +9,23 @@ $file = 'alice30.txt'
 
 $content = Get-Content -Path $file
 
-$count = 0
+
 foreach($line in $content) {
-    $count++
+
     if($line.Length -gt 70 ){    
-        write-host "["$line.Length"]" $line
-        $line | Measure-Object -Character -Word
+
+        $nbMots = $line | Measure-Object -Character -Word |Select-Object -Property Words
+
+        if($nbMots.Words -gt 10){
+
+            $nbMots = $line | Measure-Object -Character -Word | Select-Object -Property Words
+            write-host "["$nbMots.Words"]" $line
+
+        }
     }
 }
+
+
 
     
 

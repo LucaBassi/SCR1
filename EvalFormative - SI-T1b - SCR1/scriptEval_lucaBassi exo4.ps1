@@ -1,9 +1,11 @@
 $file = 'petitText.txt'
-$regexMaj = "^([A-Z])|^(\s+([A-Z]))"
+$regexMaj = "^(\s*([A-Z]))"
 $content = Get-Content -Path $file
 
-foreach($line in $content) {
-    if($line -match $regexMaj){
-        write-host $line
+echo $regexMaj
+echo $content | foreach {
+    if($_ -match $regexMaj){
+        echo "-"+$_+"-"
+ #       write-host $_
     }
 }

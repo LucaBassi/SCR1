@@ -5,7 +5,7 @@ $output_file = "results.txt"
 $regexBegLine = "^author:"
 $regexMail = "\b[A-Za-z0-9._%-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}\b"
 
-$fileList = Get-ChildItem ./$dir/ | Get-Item | where{$_.Name -Match '(\w+\-)Textbook.yml'} 
+$fileList = Get-ChildItem ./$dir/ | Get-Item | Where-Object {$_.Name -Match '(\w+\-)Textbook.yml'} 
 
 $testIfExist = 0
 
