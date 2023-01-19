@@ -2,6 +2,7 @@
 #Get-ChildItem -Path "./alice30.txt"  | Measure-Object -Property Length -Sum | Select-Object Sum, Count
 
 #--------------------------------------
+param($size = 1024)
 
 
 $fileList = Get-ChildItem ./filesToDel/ | Get-Item

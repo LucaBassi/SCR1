@@ -1,5 +1,5 @@
 $file = 'petitText.txt'
-$regexMaj = "^(\s*([A-Z]))"
+$regexMaj = '^( )*[A-Z].*'
 $content = Get-Content -Path $file
 
 echo $regexMaj
