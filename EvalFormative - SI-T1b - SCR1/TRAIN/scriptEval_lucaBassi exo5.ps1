@@ -25,9 +25,4 @@ foreach($line in $content) {
     }
 }
 
-
-
-    
-
-
-
+echo $wesh

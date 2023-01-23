@@ -1,11 +1,9 @@
-$file = 'petitText.txt'
+$file = 'alice30.txt'
 $regexMaj = '^( )*[A-Z].*'
 $content = Get-Content -Path $file
 
-echo $regexMaj
 echo $content | foreach {
-    if($_ -match $regexMaj){
-        echo "-"+$_+"-"
- #       write-host $_
+    if($_ -cmatch $regexMaj){
+        $_
     }
 }

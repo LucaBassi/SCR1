@@ -2,7 +2,7 @@
 #Get-ChildItem -Path "./alice30.txt"  | Measure-Object -Property Length -Sum | Select-Object Sum, Count
 
 #--------------------------------------
-param($size = 1024)
+param($selSize = 1024)
 
 
 $fileList = Get-ChildItem ./filesToDel/ | Get-Item
@@ -14,12 +14,14 @@ foreach($file in $fileList){
     write-host $size
     write-host $size.Sum
     
-    if ($size.Sum -lt 1024){
+    if ($size.Sum -lt $selSize){
 
         write-host "true"
         remove-item $file
+        
     }
     
 
 }
 
+Write-Host $selSize
