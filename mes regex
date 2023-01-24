@@ -37,3 +37,6 @@ regex Plaque Suisse
 
 Adresse MAC
 ^[(0-9A-Fa-f)][0-9A-Fa-f]\:[(0-9A-Fa-f)][0-9A-Fa-f]\:[(0-9A-Fa-f)][0-9A-Fa-f]\:[(0-9A-Fa-f)][0-9A-Fa-f]\:[(0-9A-Fa-f)][0-9A-Fa-f]\:[(0-9A-Fa-f)][0-9A-Fa-f]$
+
+
+^S([IMP])|S([imp])-([MIP]{1,2}|[TC])([1234]|[A])\w+

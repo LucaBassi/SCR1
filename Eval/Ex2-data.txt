@@ -1,0 +1,40 @@
+ANDOLFATTO Frederique	024 / 55 + 76123	 
+BARDET Pierre-Alain	024 / 55 + 76871	 
+BAUMER Cédric	024 / 55 + 76143	 
+BENZONANA Pascal	024 / 55 + 76079	 
+BOHLER Bernard	024 / 55 + 77259	 
+CARREL Xavier	024 / 55 + 76080	 
+CIMENTI Gabriel	024 / 55 + 76070	 
+COCHAND Oriane	024 / 55 + 77200	 
+DE HELLER Thierry	024 / 55 + 76098	 
+DUGON Alain	024 / 55 + 76121	 
+EGGER Claude	024 / 55 + 76078	 
+FASOLA Sylvain	024 / 55 + 76101	 
+GLASSEY Nicolas	024 / 55 + 76081	 
+GYURIGA Csaba	024 / 55 + 76131	 
+HURNI Pascal	024 / 55 + 76081	 
+ITHURBIDE Julien	024 / 55 + 76123	 
+JAGGI Laurent	024 / 55 + 76093	 
+JAGGI Laurent	024 / 55 + 77275	 
+JOLIQUIN Christophe	024 / 55 + 77272	 
+MOTTIER André	024 / 55 + 76081	 
+PIAGET Pascal	024 / 55 + 77279	 
+PILLONEL Christophe	024 / 55 + 77258	 
+PITTET Olivier	024 / 55 + 76094	 
+ROCHAT Claude	024 / 55 + 76123	 
+ROTEN Cédric	024 / 55 + 76079	 
+RYSER Monika	024 / 55 + 76094	 
+SAISON Yann	024 / 55 + 76077	 
+STUDER Claude	024 / 55 + 76122	 
+THIERY Yvan	024 / 55 + 76098	 
+WULLIAMOZ Didier	024 / 55 + 76081	 
+WYSSA Michael	024 / 55 + 76123	 
+ZEN-RUFFINEN Xavier	024 / 55 + 76098
+
+Mauvais:
+
+099 / 55 + 77777
+024 / 66 + 77777
+024 / 55 + 87777
+024 / 55 - 77777
+
